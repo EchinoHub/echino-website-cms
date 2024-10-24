@@ -393,6 +393,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'general.article-column',
         'general.features',
         'general.cta-section',
+        'general.sticky',
+        'general.step',
+        'general.faq',
+        'general.carousel',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

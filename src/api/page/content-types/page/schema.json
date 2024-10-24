@@ -38,7 +38,11 @@
         "general.article",
         "general.article-column",
         "general.features",
-        "general.cta-section"
+        "general.cta-section",
+        "general.sticky",
+        "general.step",
+        "general.faq",
+        "general.carousel"
       ]
     }
   }

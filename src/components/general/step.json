@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_general_steps",
+  "info": {
+    "displayName": "Step",
+    "icon": "filter"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "richtext"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Steps": {
+      "displayName": "StepItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.step-item"
+    }
+  }
+}

@@ -47,6 +47,100 @@ export interface GeneralButton extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralCarousel extends Struct.ComponentSchema {
+  collectionName: 'components_general_carousels';
+  info: {
+    displayName: 'Carousel';
+    icon: 'stack';
+  };
+  attributes: {
+    Description: Schema.Attribute.RichText;
+    Items: Schema.Attribute.Component<'general.carousel-item', true>;
+    Title: Schema.Attribute.RichText;
+  };
+}
+
+export interface GeneralCarouselItem extends Struct.ComponentSchema {
+  collectionName: 'components_general_carousel_items';
+  info: {
+    displayName: 'CarouselItem';
+    icon: 'layer';
+  };
+  attributes: {
+    Button: Schema.Attribute.Component<'general.button', false>;
+    Description: Schema.Attribute.RichText;
+    ItemTitle: Schema.Attribute.String;
+    Media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.RichText;
+  };
+}
+
+export interface GeneralCtaSection extends Struct.ComponentSchema {
+  collectionName: 'components_general_cta_sections';
+  info: {
+    displayName: 'CTASection';
+    icon: 'sun';
+  };
+  attributes: {
+    CTAButton: Schema.Attribute.Component<'general.button', false>;
+    Description: Schema.Attribute.RichText;
+    FeaturedMedia: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    Overtitle: Schema.Attribute.String;
+    Title: Schema.Attribute.RichText;
+  };
+}
+
+export interface GeneralFaq extends Struct.ComponentSchema {
+  collectionName: 'components_general_faqs';
+  info: {
+    displayName: 'FAQ';
+    icon: 'question';
+  };
+  attributes: {
+    Description: Schema.Attribute.RichText;
+    Items: Schema.Attribute.Component<'general.faq-item', true>;
+    Title: Schema.Attribute.RichText;
+  };
+}
+
+export interface GeneralFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_general_faq_items';
+  info: {
+    displayName: 'FAQItem';
+    icon: 'question';
+  };
+  attributes: {
+    Answer: Schema.Attribute.RichText;
+    Question: Schema.Attribute.RichText;
+  };
+}
+
+export interface GeneralFeatureItem extends Struct.ComponentSchema {
+  collectionName: 'components_general_feature_items';
+  info: {
+    displayName: 'FeatureItem';
+    icon: 'dashboard';
+  };
+  attributes: {
+    FeaturesName: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_general_features';
+  info: {
+    displayName: 'Features';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Description: Schema.Attribute.RichText;
+    Items: Schema.Attribute.Component<'general.feature-item', true>;
+    Title: Schema.Attribute.RichText;
+  };
+}
+
 export interface GeneralHero extends Struct.ComponentSchema {
   collectionName: 'components_general_heroes';
   info: {
@@ -121,6 +215,45 @@ export interface GeneralPartners extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralStep extends Struct.ComponentSchema {
+  collectionName: 'components_general_steps';
+  info: {
+    displayName: 'Step';
+    icon: 'filter';
+  };
+  attributes: {
+    Description: Schema.Attribute.RichText;
+    Steps: Schema.Attribute.Component<'general.step-item', true>;
+    Title: Schema.Attribute.RichText;
+  };
+}
+
+export interface GeneralStepItem extends Struct.ComponentSchema {
+  collectionName: 'components_general_step_items';
+  info: {
+    displayName: 'StepItem';
+    icon: 'layer';
+  };
+  attributes: {
+    Description: Schema.Attribute.RichText;
+    Media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.RichText;
+  };
+}
+
+export interface GeneralSticky extends Struct.ComponentSchema {
+  collectionName: 'components_general_stickies';
+  info: {
+    displayName: 'Sticky';
+    icon: 'paint';
+  };
+  attributes: {
+    Articles: Schema.Attribute.Component<'general.article', true>;
+    Description: Schema.Attribute.RichText;
+    Title: Schema.Attribute.RichText;
+  };
+}
+
 export interface GeneralSwissMade extends Struct.ComponentSchema {
   collectionName: 'components_general_swiss_mades';
   info: {
@@ -161,11 +294,21 @@ declare module '@strapi/strapi' {
       'general.article': GeneralArticle;
       'general.article-column': GeneralArticleColumn;
       'general.button': GeneralButton;
+      'general.carousel': GeneralCarousel;
+      'general.carousel-item': GeneralCarouselItem;
+      'general.cta-section': GeneralCtaSection;
+      'general.faq': GeneralFaq;
+      'general.faq-item': GeneralFaqItem;
+      'general.feature-item': GeneralFeatureItem;
+      'general.features': GeneralFeatures;
       'general.hero': GeneralHero;
       'general.integrations': GeneralIntegrations;
       'general.integrator': GeneralIntegrator;
       'general.link': GeneralLink;
       'general.partners': GeneralPartners;
+      'general.step': GeneralStep;
+      'general.step-item': GeneralStepItem;
+      'general.sticky': GeneralSticky;
       'general.swiss-made': GeneralSwissMade;
       'general.testimonial': GeneralTestimonial;
     }

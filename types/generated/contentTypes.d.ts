@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiPagePage extends Struct.CollectionTypeSchema {
   collectionName: 'pages';
   info: {
+    description: '';
     displayName: 'Page';
     pluralName: 'pages';
     singularName: 'page';
@@ -390,6 +391,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'general.hero',
         'general.article',
         'general.article-column',
+        'general.features',
+        'general.cta-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

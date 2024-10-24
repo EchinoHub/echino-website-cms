@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_general_carousels",
+  "info": {
+    "displayName": "Carousel",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "richtext"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Items": {
+      "displayName": "CarouselItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.carousel-item"
+    }
+  }
+}

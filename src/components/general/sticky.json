@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_general_stickies",
+  "info": {
+    "displayName": "Sticky",
+    "icon": "paint"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "richtext"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Articles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.article"
+    }
+  }
+}

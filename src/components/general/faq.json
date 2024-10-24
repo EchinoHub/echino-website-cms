@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_general_faqs",
+  "info": {
+    "displayName": "FAQ",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "richtext"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Items": {
+      "displayName": "FAQItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.faq-item"
+    }
+  }
+}

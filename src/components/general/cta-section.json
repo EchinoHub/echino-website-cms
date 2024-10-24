@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_general_cta_sections",
+  "info": {
+    "displayName": "CTASection",
+    "icon": "sun"
+  },
+  "options": {},
+  "attributes": {
+    "Overtitle": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "richtext"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "FeaturedMedia": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "CTAButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.button"
+    }
+  }
+}

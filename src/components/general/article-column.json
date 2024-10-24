@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_general_article_columns",
+  "info": {
+    "displayName": "ArticleColumn",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "richtext"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Articles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.article"
+    }
+  }
+}

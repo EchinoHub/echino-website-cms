@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_general_articles",
+  "info": {
+    "displayName": "Article",
+    "icon": "discuss",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "DefaultImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Title": {
+      "type": "richtext"
+    },
+    "Overtitle": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "TextOrientation": {
+      "type": "enumeration",
+      "enum": [
+        "Right",
+        "Left",
+        "Center"
+      ],
+      "default": "Left"
+    },
+    "FontAwesomeIcon": {
+      "type": "string"
+    },
+    "PageLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.button"
+    },
+    "ItalicLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.link"
+    }
+  }
+}

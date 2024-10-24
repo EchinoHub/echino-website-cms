@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_general_integrators",
+  "info": {
+    "displayName": "Integrator",
+    "icon": "heart"
+  },
+  "options": {},
+  "attributes": {
+    "Logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_general_integrations",
+  "info": {
+    "displayName": "Integrations",
+    "icon": "heart"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "richtext"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Integrators": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.integrator"
+    }
+  }
+}

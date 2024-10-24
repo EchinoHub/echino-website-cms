@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_general_testimonials",
+  "info": {
+    "displayName": "Testimonial",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "Testimonial": {
+      "type": "richtext"
+    },
+    "Company": {
+      "type": "string"
+    },
+    "Author": {
+      "type": "string"
+    },
+    "Logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Background": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_general_language_menus",
+  "info": {
+    "displayName": "LanguageMenu",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "Items": {
+      "displayName": "LanguageItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.language-item"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_general_footer_blocks",
+  "info": {
+    "displayName": "FooterBlock",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Items": {
+      "displayName": "FooterBlockItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.footer-block-item"
+    }
+  }
+}

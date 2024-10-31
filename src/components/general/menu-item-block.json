@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_general_menu_item_blocks",
+  "info": {
+    "displayName": "MenuItemBlock",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.menu-sub-item"
+    }
+  }
+}

@@ -141,6 +141,30 @@ export interface GeneralFeatures extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralFooterBlock extends Struct.ComponentSchema {
+  collectionName: 'components_general_footer_blocks';
+  info: {
+    displayName: 'FooterBlock';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Items: Schema.Attribute.Component<'general.footer-block-item', true>;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralFooterBlockItem extends Struct.ComponentSchema {
+  collectionName: 'components_general_footer_block_items';
+  info: {
+    displayName: 'FooterBlockItem';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    URL: Schema.Attribute.String;
+  };
+}
+
 export interface GeneralHero extends Struct.ComponentSchema {
   collectionName: 'components_general_heroes';
   info: {
@@ -187,6 +211,29 @@ export interface GeneralIntegrator extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralLanguageItem extends Struct.ComponentSchema {
+  collectionName: 'components_general_language_items';
+  info: {
+    description: '';
+    displayName: 'LanguageMenuItem';
+    icon: 'bulletList';
+  };
+  attributes: {
+    LanguageName: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralLanguageMenu extends Struct.ComponentSchema {
+  collectionName: 'components_general_language_menus';
+  info: {
+    displayName: 'LanguageMenu';
+    icon: 'discuss';
+  };
+  attributes: {
+    Items: Schema.Attribute.Component<'general.language-item', true>;
+  };
+}
+
 export interface GeneralLink extends Struct.ComponentSchema {
   collectionName: 'components_general_links';
   info: {
@@ -195,6 +242,50 @@ export interface GeneralLink extends Struct.ComponentSchema {
   };
   attributes: {
     Text: Schema.Attribute.String;
+    URL: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralMenuItem extends Struct.ComponentSchema {
+  collectionName: 'components_general_menu_items';
+  info: {
+    description: '';
+    displayName: 'MenuItem';
+    icon: 'attachment';
+  };
+  attributes: {
+    DisplayName: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images'>;
+    MenuItemBlock: Schema.Attribute.Component<'general.menu-item-block', true>;
+    Type: Schema.Attribute.Enumeration<['Link', 'Button', 'Image']>;
+    URL: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralMenuItemBlock extends Struct.ComponentSchema {
+  collectionName: 'components_general_menu_item_blocks';
+  info: {
+    displayName: 'MenuItemBlock';
+    icon: 'apps';
+  };
+  attributes: {
+    Items: Schema.Attribute.Component<'general.menu-sub-item', true>;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralMenuSubItem extends Struct.ComponentSchema {
+  collectionName: 'components_general_menu_sub_items';
+  info: {
+    description: '';
+    displayName: 'MenuSubItem';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Description: Schema.Attribute.RichText;
+    FontAwesomeIcon: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
     URL: Schema.Attribute.String;
   };
 }
@@ -301,10 +392,17 @@ declare module '@strapi/strapi' {
       'general.faq-item': GeneralFaqItem;
       'general.feature-item': GeneralFeatureItem;
       'general.features': GeneralFeatures;
+      'general.footer-block': GeneralFooterBlock;
+      'general.footer-block-item': GeneralFooterBlockItem;
       'general.hero': GeneralHero;
       'general.integrations': GeneralIntegrations;
       'general.integrator': GeneralIntegrator;
+      'general.language-item': GeneralLanguageItem;
+      'general.language-menu': GeneralLanguageMenu;
       'general.link': GeneralLink;
+      'general.menu-item': GeneralMenuItem;
+      'general.menu-item-block': GeneralMenuItemBlock;
+      'general.menu-sub-item': GeneralMenuSubItem;
       'general.partners': GeneralPartners;
       'general.step': GeneralStep;
       'general.step-item': GeneralStepItem;

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_general_menu_items",
+  "info": {
+    "displayName": "MenuItem",
+    "icon": "attachment",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "DisplayName": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Link",
+        "Button",
+        "Image"
+      ]
+    },
+    "MenuItemBlock": {
+      "displayName": "MenuItemBlock",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.menu-item-block"
+    }
+  }
+}

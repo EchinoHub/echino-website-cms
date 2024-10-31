@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_general_menu_sub_items",
+  "info": {
+    "displayName": "MenuSubItem",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "FontAwesomeIcon": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

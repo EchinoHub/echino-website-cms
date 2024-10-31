@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_general_language_items",
+  "info": {
+    "displayName": "LanguageMenuItem",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "LanguageName": {
+      "type": "string"
+    }
+  }
+}

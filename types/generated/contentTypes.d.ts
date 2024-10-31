@@ -369,6 +369,75 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFooterSectionFooterSection extends Struct.SingleTypeSchema {
+  collectionName: 'footer_sections';
+  info: {
+    description: '';
+    displayName: 'Footer';
+    pluralName: 'footer-sections';
+    singularName: 'footer-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Blocks: Schema.Attribute.Component<'general.footer-block', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.RichText;
+    EchinoLogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    FacebookURL: Schema.Attribute.String;
+    InstagramURL: Schema.Attribute.String;
+    Language: Schema.Attribute.Component<'general.language-menu', false>;
+    LinkedInURL: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer-section.footer-section'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    TwitterURL: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMenuMenu extends Struct.SingleTypeSchema {
+  collectionName: 'menus';
+  info: {
+    description: '';
+    displayName: 'Menu';
+    pluralName: 'menus';
+    singularName: 'menu';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    LeftSide: Schema.Attribute.DynamicZone<
+      ['general.menu-item', 'general.language-menu']
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::menu.menu'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    RightSide: Schema.Attribute.DynamicZone<
+      ['general.menu-item', 'general.language-menu']
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPagePage extends Struct.CollectionTypeSchema {
   collectionName: 'pages';
   info: {
@@ -921,6 +990,8 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::footer-section.footer-section': ApiFooterSectionFooterSection;
+      'api::menu.menu': ApiMenuMenu;
       'api::page.page': ApiPagePage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "menus",
+  "info": {
+    "singularName": "menu",
+    "pluralName": "menus",
+    "displayName": "Menu",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "LeftSide": {
+      "type": "dynamiczone",
+      "components": [
+        "general.menu-item",
+        "general.language-menu"
+      ]
+    },
+    "RightSide": {
+      "type": "dynamiczone",
+      "components": [
+        "general.menu-item",
+        "general.language-menu"
+      ]
+    }
+  }
+}

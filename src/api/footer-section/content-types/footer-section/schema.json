@@ -1,0 +1,53 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_sections",
+  "info": {
+    "singularName": "footer-section",
+    "pluralName": "footer-sections",
+    "displayName": "Footer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "EchinoLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Language": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.language-menu"
+    },
+    "FacebookURL": {
+      "type": "string"
+    },
+    "InstagramURL": {
+      "type": "string"
+    },
+    "TwitterURL": {
+      "type": "string"
+    },
+    "LinkedInURL": {
+      "type": "string"
+    },
+    "Blocks": {
+      "displayName": "FooterBlock",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.footer-block"
+    }
+  }
+}

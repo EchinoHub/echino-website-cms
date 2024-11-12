@@ -364,14 +364,14 @@ export interface GeneralSwissMade extends Struct.ComponentSchema {
 export interface GeneralTestimonial extends Struct.ComponentSchema {
   collectionName: 'components_general_testimonials';
   info: {
+    description: '';
     displayName: 'Testimonial';
     icon: 'discuss';
   };
   attributes: {
     Author: Schema.Attribute.String;
     Background: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
+      'images' | 'files' | 'videos' | 'audios'
     >;
     Company: Schema.Attribute.String;
     Logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;

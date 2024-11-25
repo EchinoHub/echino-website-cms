@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_general_legal_markdowns",
+  "info": {
+    "displayName": "LegalMarkdown",
+    "icon": "shield"
+  },
+  "options": {},
+  "attributes": {
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}

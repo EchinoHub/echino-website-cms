@@ -1,0 +1,74 @@
+{
+  "collectionName": "components_general_pricings",
+  "info": {
+    "displayName": "Pricing",
+    "icon": "handHeart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "PricingLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "PricingLogoDescription": {
+      "type": "string"
+    },
+    "MonthlyRadio": {
+      "type": "string"
+    },
+    "YearlyRadio": {
+      "type": "string"
+    },
+    "FeaturesOvertitle": {
+      "type": "string"
+    },
+    "FeaturesTitle": {
+      "type": "string"
+    },
+    "FeaturesDescription": {
+      "type": "text"
+    },
+    "PerMonth": {
+      "type": "string"
+    },
+    "PerYear": {
+      "type": "string"
+    },
+    "Highlight": {
+      "type": "string"
+    },
+    "ChoosePlan": {
+      "type": "string"
+    },
+    "Plans": {
+      "displayName": "PricingPlan",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.pricing-plan"
+    },
+    "Background": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

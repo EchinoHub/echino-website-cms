@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_general_pricing_plans",
+  "info": {
+    "displayName": "PricingPlan",
+    "icon": "heart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Highlight": {
+      "type": "boolean"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "MonthlyPrice": {
+      "type": "integer"
+    },
+    "YearlyPrice": {
+      "type": "integer"
+    },
+    "RichDescription": {
+      "type": "richtext"
+    },
+    "CustomCTA": {
+      "type": "string"
+    },
+    "FeatureBlocks": {
+      "displayName": "PricingFeatureBlock",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.pricing-feature-block"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_general_pricing_feature_blocks",
+  "info": {
+    "displayName": "PricingFeatureBlock",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "FontAwesomeIcon": {
+      "type": "string"
+    },
+    "Features": {
+      "displayName": "PricingFeature",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.pricing-feature"
+    }
+  }
+}

@@ -234,6 +234,17 @@ export interface GeneralLanguageMenu extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralLegalMarkdown extends Struct.ComponentSchema {
+  collectionName: 'components_general_legal_markdowns';
+  info: {
+    displayName: 'LegalMarkdown';
+    icon: 'shield';
+  };
+  attributes: {
+    Content: Schema.Attribute.RichText;
+  };
+}
+
 export interface GeneralLink extends Struct.ComponentSchema {
   collectionName: 'components_general_links';
   info: {
@@ -303,6 +314,87 @@ export interface GeneralPartners extends Struct.ComponentSchema {
       true
     >;
     Title: Schema.Attribute.RichText;
+  };
+}
+
+export interface GeneralPricing extends Struct.ComponentSchema {
+  collectionName: 'components_general_pricings';
+  info: {
+    description: '';
+    displayName: 'Pricing';
+    icon: 'handHeart';
+  };
+  attributes: {
+    Background: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    ChoosePlan: Schema.Attribute.String;
+    Description: Schema.Attribute.Text;
+    FeaturesDescription: Schema.Attribute.Text;
+    FeaturesOvertitle: Schema.Attribute.String;
+    FeaturesTitle: Schema.Attribute.String;
+    Highlight: Schema.Attribute.String;
+    MonthlyRadio: Schema.Attribute.String;
+    PerMonth: Schema.Attribute.String;
+    PerYear: Schema.Attribute.String;
+    Plans: Schema.Attribute.Component<'general.pricing-plan', true>;
+    PricingLogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    PricingLogoDescription: Schema.Attribute.String;
+    Title: Schema.Attribute.String;
+    YearlyRadio: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralPricingFeature extends Struct.ComponentSchema {
+  collectionName: 'components_general_pricing_features';
+  info: {
+    description: '';
+    displayName: 'PricingFeature';
+    icon: 'cog';
+  };
+  attributes: {
+    Content: Schema.Attribute.RichText;
+    Name: Schema.Attribute.String;
+    Tooltip: Schema.Attribute.RichText;
+    Type: Schema.Attribute.Enumeration<['Text', 'Check', 'N/A']>;
+  };
+}
+
+export interface GeneralPricingFeatureBlock extends Struct.ComponentSchema {
+  collectionName: 'components_general_pricing_feature_blocks';
+  info: {
+    description: '';
+    displayName: 'PricingFeatureBlock';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Features: Schema.Attribute.Component<'general.pricing-feature', true>;
+    FontAwesomeIcon: Schema.Attribute.String;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralPricingPlan extends Struct.ComponentSchema {
+  collectionName: 'components_general_pricing_plans';
+  info: {
+    description: '';
+    displayName: 'PricingPlan';
+    icon: 'heart';
+  };
+  attributes: {
+    CustomCTA: Schema.Attribute.String;
+    Description: Schema.Attribute.Text;
+    FeatureBlocks: Schema.Attribute.Component<
+      'general.pricing-feature-block',
+      true
+    >;
+    Highlight: Schema.Attribute.Boolean;
+    MonthlyPrice: Schema.Attribute.Integer;
+    RichDescription: Schema.Attribute.RichText;
+    Title: Schema.Attribute.String;
+    YearlyPrice: Schema.Attribute.Integer;
   };
 }
 
@@ -399,11 +491,16 @@ declare module '@strapi/strapi' {
       'general.integrator': GeneralIntegrator;
       'general.language-item': GeneralLanguageItem;
       'general.language-menu': GeneralLanguageMenu;
+      'general.legal-markdown': GeneralLegalMarkdown;
       'general.link': GeneralLink;
       'general.menu-item': GeneralMenuItem;
       'general.menu-item-block': GeneralMenuItemBlock;
       'general.menu-sub-item': GeneralMenuSubItem;
       'general.partners': GeneralPartners;
+      'general.pricing': GeneralPricing;
+      'general.pricing-feature': GeneralPricingFeature;
+      'general.pricing-feature-block': GeneralPricingFeatureBlock;
+      'general.pricing-plan': GeneralPricingPlan;
       'general.step': GeneralStep;
       'general.step-item': GeneralStepItem;
       'general.sticky': GeneralSticky;

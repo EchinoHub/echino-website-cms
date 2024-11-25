@@ -392,6 +392,7 @@ export interface ApiFooterSectionFooterSection extends Struct.SingleTypeSchema {
     FacebookURL: Schema.Attribute.String;
     InstagramURL: Schema.Attribute.String;
     Language: Schema.Attribute.Component<'general.language-menu', false>;
+    LegalItems: Schema.Attribute.Component<'general.link', true>;
     LinkedInURL: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -466,6 +467,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'general.step',
         'general.faq',
         'general.carousel',
+        'general.legal-markdown',
+        'general.pricing',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

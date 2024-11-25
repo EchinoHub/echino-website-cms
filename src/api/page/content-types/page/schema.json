@@ -42,7 +42,9 @@
         "general.sticky",
         "general.step",
         "general.faq",
-        "general.carousel"
+        "general.carousel",
+        "general.legal-markdown",
+        "general.pricing"
       ]
     }
   }

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_general_pricing_features",
+  "info": {
+    "displayName": "PricingFeature",
+    "icon": "cog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Text",
+        "Check",
+        "N/A"
+      ]
+    },
+    "Tooltip": {
+      "type": "richtext"
+    },
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}

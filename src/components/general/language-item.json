@@ -9,6 +9,9 @@
   "attributes": {
     "LanguageName": {
       "type": "string"
+    },
+    "LanguageISO": {
+      "type": "string"
     }
   }
 }

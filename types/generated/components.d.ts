@@ -219,6 +219,7 @@ export interface GeneralLanguageItem extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
+    LanguageISO: Schema.Attribute.String;
     LanguageName: Schema.Attribute.String;
   };
 }

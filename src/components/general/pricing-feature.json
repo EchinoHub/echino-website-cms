@@ -7,9 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "Name": {
-      "type": "string"
-    },
     "Type": {
       "type": "enumeration",
       "enum": [

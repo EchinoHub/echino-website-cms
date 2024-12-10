@@ -13,8 +13,10 @@
     "FontAwesomeIcon": {
       "type": "string"
     },
-    "Features": {
-      "displayName": "PricingFeature",
+    "Description": {
+      "type": "richtext"
+    },
+    "Items": {
       "type": "component",
       "repeatable": true,
       "component": "general.pricing-feature"

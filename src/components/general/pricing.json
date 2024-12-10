@@ -61,14 +61,20 @@
       "component": "general.pricing-plan"
     },
     "Background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "Features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.pricing-feature-block"
     }
   }
 }

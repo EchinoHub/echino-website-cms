@@ -331,6 +331,7 @@ export interface GeneralPricing extends Struct.ComponentSchema {
     >;
     ChoosePlan: Schema.Attribute.String;
     Description: Schema.Attribute.Text;
+    Features: Schema.Attribute.Component<'general.pricing-feature-block', true>;
     FeaturesDescription: Schema.Attribute.Text;
     FeaturesOvertitle: Schema.Attribute.String;
     FeaturesTitle: Schema.Attribute.String;
@@ -357,7 +358,6 @@ export interface GeneralPricingFeature extends Struct.ComponentSchema {
   };
   attributes: {
     Content: Schema.Attribute.RichText;
-    Name: Schema.Attribute.String;
     Tooltip: Schema.Attribute.RichText;
     Type: Schema.Attribute.Enumeration<['Text', 'Check', 'N/A']>;
   };
@@ -371,8 +371,9 @@ export interface GeneralPricingFeatureBlock extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
-    Features: Schema.Attribute.Component<'general.pricing-feature', true>;
+    Description: Schema.Attribute.RichText;
     FontAwesomeIcon: Schema.Attribute.String;
+    Items: Schema.Attribute.Component<'general.pricing-feature', true>;
     Title: Schema.Attribute.String;
   };
 }
@@ -387,10 +388,6 @@ export interface GeneralPricingPlan extends Struct.ComponentSchema {
   attributes: {
     CustomCTA: Schema.Attribute.String;
     Description: Schema.Attribute.Text;
-    FeatureBlocks: Schema.Attribute.Component<
-      'general.pricing-feature-block',
-      true
-    >;
     Highlight: Schema.Attribute.Boolean;
     MonthlyPrice: Schema.Attribute.Integer;
     RichDescription: Schema.Attribute.RichText;

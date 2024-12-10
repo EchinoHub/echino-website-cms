@@ -27,12 +27,6 @@
     },
     "CustomCTA": {
       "type": "string"
-    },
-    "FeatureBlocks": {
-      "displayName": "PricingFeatureBlock",
-      "type": "component",
-      "repeatable": true,
-      "component": "general.pricing-feature-block"
     }
   }
 }

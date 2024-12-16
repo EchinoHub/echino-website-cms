@@ -16,7 +16,7 @@
     "Description": {
       "type": "richtext"
     },
-    "Items": {
+    "Features": {
       "type": "component",
       "repeatable": true,
       "component": "general.pricing-feature"

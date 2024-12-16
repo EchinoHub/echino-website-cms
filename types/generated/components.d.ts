@@ -357,9 +357,9 @@ export interface GeneralPricingFeature extends Struct.ComponentSchema {
     icon: 'cog';
   };
   attributes: {
-    Content: Schema.Attribute.RichText;
+    Items: Schema.Attribute.Component<'general.pricing-feature-item', true>;
+    Name: Schema.Attribute.String;
     Tooltip: Schema.Attribute.RichText;
-    Type: Schema.Attribute.Enumeration<['Text', 'Check', 'N/A']>;
   };
 }
 
@@ -372,9 +372,20 @@ export interface GeneralPricingFeatureBlock extends Struct.ComponentSchema {
   };
   attributes: {
     Description: Schema.Attribute.RichText;
+    Features: Schema.Attribute.Component<'general.pricing-feature', true>;
     FontAwesomeIcon: Schema.Attribute.String;
-    Items: Schema.Attribute.Component<'general.pricing-feature', true>;
     Title: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralPricingFeatureItem extends Struct.ComponentSchema {
+  collectionName: 'components_general_pricing_feature_items';
+  info: {
+    displayName: 'PricingFeatureItem';
+  };
+  attributes: {
+    Content: Schema.Attribute.String;
+    Type: Schema.Attribute.Enumeration<['Text', 'Check', 'N/A']>;
   };
 }
 
@@ -498,6 +509,7 @@ declare module '@strapi/strapi' {
       'general.pricing': GeneralPricing;
       'general.pricing-feature': GeneralPricingFeature;
       'general.pricing-feature-block': GeneralPricingFeatureBlock;
+      'general.pricing-feature-item': GeneralPricingFeatureItem;
       'general.pricing-plan': GeneralPricingPlan;
       'general.step': GeneralStep;
       'general.step-item': GeneralStepItem;

@@ -7,19 +7,17 @@
   },
   "options": {},
   "attributes": {
-    "Type": {
-      "type": "enumeration",
-      "enum": [
-        "Text",
-        "Check",
-        "N/A"
-      ]
+    "Name": {
+      "type": "string"
     },
     "Tooltip": {
       "type": "richtext"
     },
-    "Content": {
-      "type": "richtext"
+    "Items": {
+      "displayName": "PricingFeatureItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.pricing-feature-item"
     }
   }
 }

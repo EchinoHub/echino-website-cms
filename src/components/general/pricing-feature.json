@@ -8,13 +8,12 @@
   "options": {},
   "attributes": {
     "Name": {
-      "type": "string"
+      "type": "richtext"
     },
     "Tooltip": {
       "type": "richtext"
     },
     "Items": {
-      "displayName": "PricingFeatureItem",
       "type": "component",
       "repeatable": true,
       "component": "general.pricing-feature-item"

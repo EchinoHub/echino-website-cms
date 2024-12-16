@@ -358,7 +358,7 @@ export interface GeneralPricingFeature extends Struct.ComponentSchema {
   };
   attributes: {
     Items: Schema.Attribute.Component<'general.pricing-feature-item', true>;
-    Name: Schema.Attribute.String;
+    Name: Schema.Attribute.RichText;
     Tooltip: Schema.Attribute.RichText;
   };
 }
@@ -381,10 +381,11 @@ export interface GeneralPricingFeatureBlock extends Struct.ComponentSchema {
 export interface GeneralPricingFeatureItem extends Struct.ComponentSchema {
   collectionName: 'components_general_pricing_feature_items';
   info: {
+    description: '';
     displayName: 'PricingFeatureItem';
   };
   attributes: {
-    Content: Schema.Attribute.String;
+    Content: Schema.Attribute.RichText;
     Type: Schema.Attribute.Enumeration<['Text', 'Check', 'N/A']>;
   };
 }
